@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => { /* #swagger.ignore = true */ res.redirect('/doc'); });
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile, options));
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerFile, swaggerOptions));
 app.use('/users', usersRouter);
 
 
